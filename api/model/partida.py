@@ -37,7 +37,7 @@ class Partida(Base):
             ec: jogadores expulsos do time da casa
             ef: jogadores expulsos do time visitante
             vencedor: time vencedor da partida
-            data_insercao: data de quando o paciente foi inserido à base
+            data_insercao: data de quando a partida foi inserida à base
         """
         self.nome_time_casa = nome_time_casa
         self.cod_time_casa = cod_time_casa

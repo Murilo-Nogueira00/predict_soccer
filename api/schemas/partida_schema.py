@@ -38,10 +38,10 @@ class ListaPartidasSchema(BaseModel):
     """
     partidas: List[PartidaViewSchema]
 
-# Apresenta apenas os dados de um paciente    
+# Apresenta apenas os dados de um partida    
 def apresenta_partida(partida: Partida):
-    """ Retorna uma representação do paciente seguindo o schema definido em
-        PacienteViewSchema.
+    """ Retorna uma representação do partida seguindo o schema definido em
+        PartidaViewSchema.
     """
     return {
         "id": partida.id,
@@ -53,27 +53,5 @@ def apresenta_partida(partida: Partida):
         "ef": partida.ef,
         "vencedor": partida.vencedor,
     }
-    
-# # Apresenta uma lista de pacientes
-# def apresenta_pacientes(pacientes: List[Paciente]):
-#     """ Retorna uma representação do paciente seguindo o schema definido em
-#         PacienteViewSchema.
-#     """
-#     result = []
-#     for paciente in pacientes:
-#         result.append({
-#             "id": paciente.id,
-#             "name": paciente.name,
-#             "preg": paciente.preg,
-#             "plas": paciente.plas,
-#             "pres": paciente.pres,    
-#             "skin": paciente.skin,
-#             "test": paciente.test,
-#             "mass": paciente.mass,
-#             "pedi": paciente.pedi,
-#             "age": paciente.age,
-#             "outcome": paciente.outcome
-#         })
 
-#     return {"pacientes": result}
 
