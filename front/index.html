@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simulação de Partida</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="team-selection">
+            <div class="team-box" id="home-team-box">
+                <p>Time da Casa</p>
+                <div id="home-teams" class="logo-grid" onclick="selectTeam(event, 'home-teams')">
+                    <!-- Adicione os logos dos times da casa aqui -->
+                </div>
+            </div>
+            <div class="versus">X</div>
+            <div class="team-box" id="away-team-box">
+                <p>Time Visitante</p>
+                <div id="away-teams" class="logo-grid" onclick="selectTeam(event, 'away-teams')">
+                    <!-- Adicione os logos dos times visitantes aqui -->
+                </div>
+            </div>
+        </div>
+
+        <button id="simulate-button" onclick="simularPartida()">Simular Partida</button>
+
+        <div id="winner" class="hidden">
+            <p>Time Vencedor:</p>
+            <img id="winner-logo" src="" alt="Logo do Time Vencedor">
+        </div>
+
+        <!-- Resultado da Partida e Probabilidades -->
+        <div class="probabilidadesTimes">
+            <div class="logos">
+                <p class="item" id="logoCasa"></p>
+                <p class="item" id="logoEmpate"></p>
+                <p class="item" id="logoVisitante"></p>
+            </div>
+            <div class="probabilidades">
+                <p class="item" id="probabilidadeCasa"></p>
+                <p class="item" id="probabilidadeEmpate"></p>
+                <p class="item" id="probabilidadeVisitante"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

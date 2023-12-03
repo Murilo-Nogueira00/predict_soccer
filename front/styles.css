@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.team-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.team-box {
+    margin-bottom: 10px;
+}
+
+.versus {
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Adicione ao seu arquivo styles.css
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+.logo-grid img {
+    width: 50px;
+    /* ou o tamanho desejado */
+    height: auto;
+    /* mantém a proporção original */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.logo-grid img:hover {
+    transform: scale(1.1);
+}
+
+.logo-grid img.disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+.logo-grid img.selected {
+    filter: grayscale(0%);
+}
+
+#simulate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#winner {
+    display: none;
+    margin-top: 20px;
+}
+
+#winner-logo {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+
+.probabilidadesTimes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos, .probabilidades {
+    display: flex;
+    align-items: center;
+    margin-bottom: -25px;
+}
+
+.item {
+    margin: 5px;
+    padding: 10px;
+}
+
+
+.logo-small {
+    width: 44px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+#probabilidadeCasa,
+#probabilidadeVisitante,
+#probabilidadeEmpate {
+    font-weight: bold;
+    margin: 5px 0;
+}
