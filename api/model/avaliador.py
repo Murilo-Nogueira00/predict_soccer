@@ -11,6 +11,6 @@ class Avaliador:
 
         # Caso o seu problema tenha mais do que duas classes, altere o parâmetro average
         return (accuracy_score(Y_test, predicoes),
-                recall_score(Y_test, predicoes, average='binary'),
-                precision_score(Y_test, predicoes, average='binary'),
-                f1_score(Y_test, predicoes, average='binary'))
+                recall_score(Y_test, predicoes, average='macro'),
+                precision_score(Y_test, predicoes, average='macro'),
+                f1_score(Y_test, predicoes, average='macro'))

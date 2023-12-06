@@ -6,7 +6,7 @@ from utils.calcula_dados import registra_finalizacoes_e_probabilidades
 
 class Model:
     
-    def carrega_modelo(path):
+    def carrega_modelo(self, path):
         """Dependendo se o final for .pkl ou .joblib, carregamos de uma forma ou de outra
         """
         
