@@ -1,8 +1,7 @@
 from flask_openapi3 import OpenAPI, Info, Tag
 from flask import jsonify, redirect
-from urllib.parse import unquote
 
-from model import Session, Model
+from model.modelo import Model
 from schemas import *
 from flask_cors import CORS
 
@@ -39,8 +38,9 @@ def predict(form: PartidaSchema):
     """
     
     # Carregando modelo
-    ml_path = 'ml_model/predict_soccer.joblib'
-    modelo = Model.carrega_modelo(ml_path)
+    ml_path = 'ml_model/predict_soccer_svm.joblib'
+    model = Model()
+    modelo = model.carrega_modelo(ml_path)
 
     vencedor, probabilidades = Model.preditor(modelo, form)
 

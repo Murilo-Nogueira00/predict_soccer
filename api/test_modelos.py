@@ -22,26 +22,25 @@ X = dataset.iloc[:, 0:-1]
 Y = dataset.iloc[:, -1]
     
 # Método para testar o modelo de Regressão Logística a partir do arquivo correspondente
-# O nome do método a ser testado necessita começar com "test_"
-# def test_modelo_lr():  
-#     # Importando o modelo de regressão logística
-#     lr_path = 'ml_model/predict_soccer.joblib'
-#     modelo_lr = modelo.carrega_modelo(lr_path)
+def test_modelo_svm():
+    # Importando o modelo de regressão logística
+    svm_path = 'ml_model/predict_soccer_svm.joblib'
+    modelo_svm = modelo.carrega_modelo(svm_path)
 
-#     # Obtendo as métricas da Regressão Logística
-#     acuracia_lr, recall_lr, precisao_lr, f1_lr = avaliador.avaliar(modelo_lr, X, Y)
+    # Obtendo as métricas da Regressão Logística
+    acuracia_svm, recall_svm, precisao_svm, f1_svm = avaliador.avaliar(modelo_svm, X, Y)
     
-#     # Testando as métricas da Regressão Logística 
-#     # Modifique as métricas de acordo com seus requisitos
-#     assert acuracia_lr >= 0.01 
-#     assert recall_lr >= 0.01 
-#     assert precisao_lr >= 0.01 
-#     assert f1_lr >= 0.01 
+    # Testando as métricas da Regressão Logística 
+    # Modifique as métricas de acordo com seus requisitos
+    assert acuracia_svm >= 0.485
+    assert recall_svm >= 0.33
+    assert precisao_svm >= 0.27
+    assert f1_svm >= 0.23
  
-# Método para testar modelo KNN a partir do arquivo correspondente
+# # Método para testar modelo KNN a partir do arquivo correspondente
 def test_modelo_knn():
     # Importando modelo de KNN
-    knn_path = 'ml_model/predict_soccer.joblib'
+    knn_path = 'ml_model/predict_soccer_knn.joblib'
     modelo_knn = modelo.carrega_modelo(knn_path)
 
     # Obtendo as métricas do KNN

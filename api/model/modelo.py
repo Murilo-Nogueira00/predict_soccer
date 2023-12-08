@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import pickle
 import joblib
@@ -24,12 +25,16 @@ class Model:
 
         time_casa, time_fora = instancia_times(form.sigla_casa, form.sigla_fora)
         finalizacoes_casa, finalizacoes_fora = registra_finalizacoes_e_probabilidades(time_casa, time_fora)
+        expulsoes_casa = min(max(random.betavariate(100, 1), 0), 1)
+        expulsoes_fora = min(max(random.betavariate(1, 100), 0), 1)
+        print(finalizacoes_casa, finalizacoes_fora)
+        print(expulsoes_casa, expulsoes_fora)
         X_input = np.array([0, 
                             1, 
                             finalizacoes_casa,
                             finalizacoes_fora,
-                            0, 
-                            0
+                            expulsoes_casa,
+                            expulsoes_fora
                         ])
         # Faremos o reshape para que o modelo entenda que estamos passando
         diagnosis = model.predict(X_input.reshape(1, -1))
