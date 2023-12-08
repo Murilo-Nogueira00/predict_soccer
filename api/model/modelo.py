@@ -27,8 +27,6 @@ class Model:
         finalizacoes_casa, finalizacoes_fora = registra_finalizacoes_e_probabilidades(time_casa, time_fora)
         expulsoes_casa = min(max(random.betavariate(100, 1), 0), 1)
         expulsoes_fora = min(max(random.betavariate(1, 100), 0), 1)
-        print(finalizacoes_casa, finalizacoes_fora)
-        print(expulsoes_casa, expulsoes_fora)
         X_input = np.array([0, 
                             1, 
                             finalizacoes_casa,
