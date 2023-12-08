@@ -120,8 +120,6 @@ function selectTeam(teamCode, selectedBox, otherBox) {
   console.log(logosSelecionados)
 }
 
-document.getElementById('simulate-button').addEventListener('click', simularPartida);
-
 
 function simularPartida() {
   if (logosSelecionados.length < 2) {
